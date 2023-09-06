@@ -32,7 +32,7 @@ app.use(
 const mongoose = require("mongoose");
 mongoose.set("strictQuery", false);
 const dev_db_url = process.env.DB; 
-const mongoDB = process.env.MONGODB_URL || dev_db_url;
+const mongoDB = /*process.env.MONGODB_URL ||*/ dev_db_url;
 
 main().catch((err) => console.log(err));
 async function main() {
